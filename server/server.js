@@ -5,8 +5,7 @@ import { Configuration, OpenAIApi } from 'openai'
 
 dotenv.config()
 
-//console.log(process.env.OPENAI_API_KEY)
-
+console.log(process.env.OPENAI_API_KEY);
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
 });
@@ -19,7 +18,7 @@ app.use(express.json())
 
 app.get('/', async (req, res) => {
   res.status(200).send({
-    message: 'Greetings from CodeZai. An AI created by @void__zai, which will help you understand coding with just one question.'
+    message: 'Greetings from CodeZai! an AI created by @void__zai.'
   })
 })
 
